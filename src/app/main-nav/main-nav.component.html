@@ -1,0 +1,55 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav side-nav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)"
+  >
+    <mat-toolbar> <img src="favicon.ico" alt="" /> App Name </mat-toolbar>
+    <mat-divider></mat-divider>
+
+    <div id="menu-div">
+      <a
+        class="a-menu flex-container"
+        *ngFor="let menu of menus"
+        routerLink="{{ menu.route }}"
+        routerLinkActive="active"
+      >
+        <mat-icon aria-label="Side nav toggle icon">{{ menu.icon }}</mat-icon>
+        <p>{{ menu.menu }}</p>
+      </a>
+    </div>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="fix-topbar top-bar">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="(isHandset$ | async)"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="!(isHandset$ | async)"
+      >
+        <mat-icon *ngIf="drawer.opened" matTooltip="Close sidebar"
+          >arrow_back_ios</mat-icon
+        >
+        <mat-icon *ngIf="!drawer.opened" matTooltip="Open sidebar"
+          >arrow_forward_ios</mat-icon
+        >
+      </button>
+      <span>Material Navigation</span>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

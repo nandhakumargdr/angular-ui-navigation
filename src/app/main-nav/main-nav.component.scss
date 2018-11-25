@@ -1,0 +1,143 @@
+$top-nav-color: white;
+$side-nav-bg: white;
+$side-menu-default-color: white;
+$side-menu-default-content-color: rgb(31, 6, 143);
+$side-menu-hover-color: rgba(31, 6, 143, 0.308);
+$side-menu-hover-content-color: white;
+$side-menu-active-color : rgb(31, 6, 143);
+$side-menu-active-content-color : white;
+$menu-border-radius: 6px;
+$font : sans-serif;
+
+.sidenav-container {
+  height: 100%;
+}
+
+.top-bar {
+  background-color:$top-nav-color;
+}
+
+.sidenav {
+  width: 260px;
+  border: none;
+  background-color: $side-nav-bg;
+  -webkit-box-shadow: -15px 13px 108px -16px rgba(156, 156, 156, 1);
+  -moz-box-shadow: -15px 13px 108px -16px rgba(156, 156, 156, 1);
+  box-shadow: -15px 13px 108px -16px rgba(156, 156, 156, 1);
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.fix-topbar {
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000;
+}
+
+
+.a-menu {
+  // display: block;
+  margin: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: $font;
+  text-decoration: none;
+  border-radius: $menu-border-radius;
+  font-family: $font;
+  color: $side-menu-default-content-color;
+}
+
+.a-menu:hover {
+  background-color: $side-menu-hover-color;
+  border-radius: $menu-border-radius;
+  color: $side-menu-hover-content-color;
+}
+
+#menu-div a.active {
+  background-color: $side-menu-active-color;
+  border-radius: $menu-border-radius;
+  color: $side-menu-active-content-color;
+  font-family: $font;
+  -webkit-box-shadow: -11px 42px 82px -11px rgba(0,0,0,0.22);
+  -moz-box-shadow: -11px 42px 82px -11px rgba(0,0,0,0.22);
+  box-shadow: -11px 42px 82px -11px rgba(0,0,0,0.22);
+}
+
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.flex-container p {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+
+// .mat-nav-list a.active {
+//   color: white;
+//   background-color:  rgb(31, 6, 143);
+//   border-radius: 6px;
+//   font-weight: bold;
+//   width: 240px;
+//   margin-left: 10px;
+//   margin-right: 10px;
+//   -webkit-box-shadow: 14px 10px 78px -13px rgba(0,0,0,0.75);
+// -moz-box-shadow: 14px 10px 78px -13px rgba(0,0,0,0.75);
+// box-shadow: 14px 10px 78px -13px rgba(0,0,0,0.75);
+
+// }
+
+
+
+// .mat-nav-list a.active {
+//   margin: 10px;
+//   color: white;
+//   background-color: rgb(31, 6, 143);
+//   border-radius: 6px;
+//   font-weight: bold;
+//   -webkit-box-shadow: -19px -1px 92px -27px rgba(0,0,0,0.22);
+//   -moz-box-shadow: -19px -1px 92px -27px rgba(0,0,0,0.22);
+//   box-shadow: -19px -1px 92px -27px rgba(0,0,0,0.22);
+// }
+
+// .vertical-menu a {
+//   color: black;
+//   display: block;
+//   margin: 10px;
+//   padding: 12px;
+//   font-family: $font;
+//   text-decoration: none;
+// }
+
+
+
+// .vertical-menu a:hover {
+//   background-color: rgba(31, 6, 143, 0.13);
+//   border-radius: 4px;
+// }
+
+// .vertical-menu a.active {
+//   margin: 10px;
+//   color: white;
+//   background-color: rgb(31, 6, 143);
+//   border-radius: 6px;
+//   font-family: $font;
+//   -webkit-box-shadow: -11px 42px 82px -11px rgba(0,0,0,0.22);
+//   -moz-box-shadow: -11px 42px 82px -11px rgba(0,0,0,0.22);
+//   box-shadow: -11px 42px 82px -11px rgba(0,0,0,0.22);
+// }
+
